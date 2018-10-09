@@ -1,5 +1,5 @@
 ---
-title: "Sample page using plotly"
+title: "Plotly 3d sample"
 author: "Mihai Chiriac"
 date: "October 9, 2018"
 output: html_document
@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Sample web page using plotly in R
+## Web page sample using plotly in R
 
 The 3D plot uses the mtcars dataset. It dislays the wt, mpg and hp on 3 axis. The color is devined by the disp variation.
 
