@@ -1,0 +1,28 @@
+---
+title: "Sample page using plotly"
+author: "Mihai Chiriac"
+date: "October 9, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Sample web page using plotly in R
+
+The 3D plot uses the mtcars dataset. It dislays the wt, mpg and hp on 3 axis. The color is devined by the disp variation.
+
+```{r warning=FALSE, message=FALSE}
+
+library(plotly)
+
+plot_ly(mtcars, x=~wt, y=~mpg, z=~hp, type="scatter3d", mode="markers", color= ~disp) %>%
+add_annotations( text="2018-10-09", xref="paper", yref="paper",
+x=1.01, xanchor="left",
+y=0.2, yanchor="bottom",
+legendtitle=TRUE, showarrow=FALSE ) %>%
+layout( legend=list(y=0.2, yanchor="top"))
+
+
+```
