@@ -1,0 +1,28 @@
+---
+title: "Plotly 3D sample"
+author: "Mihai Chiriac"
+date: "October 11, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Plotly 3D sample
+
+```{r warning=FALSE, message=FALSE}
+
+library(plotly)
+
+plot_ly(mtcars, x=~wt, y=~mpg, z=~hp, type="scatter3d", mode="markers", color= ~disp) %>%
+add_annotations( text="2018-10-09", xref="paper", yref="paper",
+x=1.01, xanchor="left",
+y=0.2, yanchor="bottom",
+legendtitle=TRUE, showarrow=FALSE ) %>%
+layout( legend=list(y=0.2, yanchor="top"))
+
+
+```
+
+
